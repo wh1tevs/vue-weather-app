@@ -1,0 +1,13 @@
+html, body, #app {
+  @apply h-screen bg-slate-50;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animation-spin {
+  animation: reverse spin 1s linear infinite;
+}
