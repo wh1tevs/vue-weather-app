@@ -8,6 +8,7 @@ type Coords = { lat: number; lon: number };
 export class WeatherService {
   static async getWeather({ lat, lon }: Coords): Promise<Weather> {
     const response = await ky.get(WEATHER_API, {
+      mode: 'cors',
       searchParams: {
         units: 'metric',
         lat: lat.toString(),

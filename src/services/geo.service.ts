@@ -6,6 +6,7 @@ const GEO_API = `http://api.openweathermap.org/geo/1.0/direct`;
 export class GeoService {
   static async search(name: string, limit = 20): Promise<City[]> {
     const response = await ky.get(GEO_API, {
+      mode: 'cors',
       searchParams: {
         q: name,
         limit: limit.toString(),
