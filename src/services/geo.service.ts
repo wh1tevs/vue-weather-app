@@ -1,7 +1,7 @@
 import ky from 'ky';
 import type { City } from '@/interfaces/City';
 
-const GEO_API = `http://api.openweathermap.org/geo/1.0/direct`;
+const GEO_API = `https://api.openweathermap.org/geo/1.0/direct`;
 
 export class GeoService {
   static async search(name: string, limit = 20): Promise<City[]> {
